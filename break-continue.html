@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Break dan Continue</title>
+</head>
+<body>
+   
+
+   <script>
+      // Break dan Continue pada JS, sama fungsi nya seperti yg ada pd Java.
+      // Break: menghentikan seluruh perulangan.
+      // Continue: menghentikan perulangan saat ini, lalu melanjutkan ke perulangan selanjutnya.
+
+      // Contoh Break Statement
+      // let counter = 1;
+      // while(true) {
+      //    document.writeln(`<p>Perulangan ke-${counter}</p>`);
+      //    counter++;
+
+      //    if (counter > 10) break;
+      // }
+
+      // Contoh Continue Statement
+      for (let index = 0; index < 20; index++) {
+         if (index % 2 === 0) {
+            continue;
+         }
+         document.writeln(`<p>Perulangan Ganjil ke-${index}</p>`);         
+      }
+   </script>
+
+</body>
+</html>

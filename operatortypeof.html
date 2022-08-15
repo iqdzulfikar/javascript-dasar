@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Operator typeof</title>
+</head>
+<body>
+   
+   <script>
+      // Typeof: operator untuk melihat tipedata suatu value atau variable
+      // Hasil operator typeof sebuah string tipedatanya
+      /**
+       * Undefined -> "undefined"
+       * Null -> "Object"
+       * Boolean -> "boolean"
+       * Number -> "number"
+       * BigInt -> "bigint"
+       * String -> "string"
+       * Symbol -> "symbol"
+       * Function -> "function"
+       * Lainnya -> "object" 
+       * */
+      
+      let data = null;
+      const typeOfData = typeof data;
+      
+      document.writeln(`Tipedata: ${typeOfData}`);
+
+   </script>
+
+</body>
+</html>

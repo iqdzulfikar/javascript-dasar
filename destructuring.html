@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Destructuring</title>
+	</head>
+	<body>
+		<script>
+			// Destructuring: fitur untuk membongkar value2 di array atau object ke dalam sebuah variable-variable
+
+			// Destructuring Array
+			// const names = ["Rifqi", "Dzulfikar", "Muhammad", "Luthfi", "Arfi"];
+			// const [mName, lName, fName, ...others] = names;
+
+			// console.info(fName);
+			// console.info(mName);
+			// console.info(lName);
+			// console.table(others);
+
+			// const person = {
+			//     fName: 'Rifqi',
+			//     lName: 'Dzulfikar',
+			//     address: {
+			//         street: "Jl. Soreang - Cipatik",
+			//         city: "Bandung",
+			//         country: "Indonesia"
+			//     },
+			//     hobby: "Tidur",
+			//     citaCita: "Presiden"
+			// };
+
+			// Destructuring Object
+			// --Nama variable harus sama dengan nama property di dalam objectnya
+			// const {fName, lName, address, ...others} = person;
+
+			// Destructuring Nested Object
+			// const {fName, lName, address: {street, city, country}, ...others} = person;
+
+			// console.info(fName);
+			// console.info(lName);
+			// console.info(street);
+			// console.info(city);
+			// console.info(country);
+			// console.table(others);
+
+			// Destructuring di Function parameter object
+			// function displayPerson({firstName, middleName, lastName}) {
+			//     console.info(firstName);
+			//     console.info(middleName);
+			//     console.info(lastName);
+			// }
+
+			// Destructuring di Function parameter array
+			// function sum([fValue, sValue]) {
+			//     return fValue + sValue;
+			// }
+
+			// const person = {
+			//     firstName: 'Muhammad',
+			//     middleName: 'Rifqi',
+			//     lastName: 'Dzulfikar'
+			// };
+
+			// displayPerson(person);
+			// console.info(sum([10, 5]));
+			// console.info(sum([10, 90]));
+
+			// Default Value Destructuring Array
+			// const names = ['Muhammad', 'Rifqi'];
+			// const [fName, mName, lName = 'Dzulfikar'] = names;
+
+			// console.info(fName);
+			// console.info(mName);
+			// console.info(lName);
+            
+			// Default Value Destructuring Object
+			const person = {
+                mName: 'Rifqi',
+				lName: 'Dzulfikar'
+			};
+            // const {fName = 'Muhammad', mName, lName} = person;
+            
+            // console.info(fName);
+            // console.info(mName);
+            // console.info(lName);
+
+            // Menggunakan nama Variable lain pd saat Destructuring Object
+            const {
+                fName: namaDepan = 'Muhammad',
+                mName: namaTengah,
+                lName: namaAkhir
+            } = person;
+
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaAkhir);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nullish Coalescing Operator</title>
+</head>
+<body>
+   
+
+   <script>
+      // Nullish value adalah `null` dan `undefined`
+      // Nullish coalescing operator (??) merupakan operator yg mirip dengan ternary operator, yang membedakannya pada kondisi. Jika bernilai null, atau undefined, baru value defaultnya diambil.
+
+      let params; // undefined
+
+      let data = params ?? "Nilainya (\'NULL\' atau \'UNDEFINED\'')";
+      
+      document.writeln(params)
+      document.writeln("<br>")
+      document.writeln(data)
+
+   </script>
+
+</body>
+</html>

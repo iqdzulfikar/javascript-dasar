@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    
+    <script>
+
+        // Scope: Ruang lingkup akses sebuah data.
+
+        // Global scope
+        let counter = 0;
+
+        function hitMe() {
+            counter++;
+        }
+
+        function first() {
+            let firstVar = 'First';
+        }
+
+        function second() {
+            let secondVar = 'Second';
+        }
+
+        console.info(counter);
+
+        // ERROR: Cannot access a local scope
+        console.info(firstVar);
+        console.info(secondVar);
+
+    </script>
+
+</body>
+</html>

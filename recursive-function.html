@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Function</title>
+</head>
+<body>
+    
+    <script>
+
+        // Recursive Function: kemampuan suatu function memanggil function dirinya sendiri.
+        // Recursive Function biasanya digunakan seperti kasus Factorial
+
+        // Factorial Loop (without recursive)
+        function factorial(value) {
+            let result = 1;
+
+            for (let index = 1; index <= value; index++) {
+                result *= index;
+            }
+            return result;
+        }
+
+        function factorialRecursive(value) {
+            if (value === 1) {
+                return 1;
+            } else {
+                return value * factorialRecursive(value - 1);
+            }
+        }
+
+        let result = factorial(3);
+
+        document.writeln(`<p>Hasil: ${1 * 2 * 3}</p>`);
+        document.writeln(`<p>Hasil: ${result}</p>`);
+        
+        result = factorialRecursive(4);
+        
+        document.writeln(`<p>Hasil: ${1 * 2 * 3 * 4}</p>`);
+        document.writeln(`<p>Hasil: ${result}</p>`);
+
+    </script>
+
+</body>
+</html>

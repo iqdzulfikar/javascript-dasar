@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tipe Data Array</title>
+</head>
+<body>
+
+   <script>
+      // JavaScript adalah bahasa yg dinamis, artinya datanya bisa bertambah dengan sendirinya di tengah jalan, berbeda dengan java yg panjang arraynya 'fixed'
+      // Nilai yang dimasukkan ke dalam array bersifat bebas, artinya valuenya dapat berisi satu tipe data yg sama atau campuran dengan tipe data lainnya. Bahkan array juga dapat menampung array lainnya (Multidimensional-array).
+      // Urutan array disebut dengan index, dan dimulai dengan urutan 0
+      // Ketika kita menambahkan element/value baru ke dalam array, js akan menambahkannya di akhir array
+      const arrayKosong = [];
+      const names = ['Muhammad', 'Rifqi', 'Dzulfkar', 'Luthfi', 'Zaki', 'Khansa', 11, true, 3.14]
+      
+      // Menampilkan panjang array & value dari array-nya itu sendiri
+      console.info(names)
+
+      // Menampilkan array ke dalam bentuk table
+      // | (index) | (value) |
+      console.table(names)
+
+      // Mendapatkn panjang array dengan field 'length'
+      console.info(names.length)
+
+      // Menambahkan data menggunakan push(value) method
+      names.push('Afiya')
+
+      // Menampilkan array dengan spesifik index
+      console.info(names[2])
+
+      // Me-replace value pada index array
+      names[1] = 'Iki'
+      console.info(names)
+
+      // Menghapus value pada index tertentu
+      // Index yang dihapus di dalam array, tidak akan mempengaruhi panjang dari Array nya itu sendiri (artinya, jika panjang 7, dan index 5 dihapus. Panjang arraynya akan tetap sama tujuh, dan index ke-5 akan bernilai empty). 
+      // Atau hanya datanya saja yang dihilangkan, bukan index-nya (indexnya masih tetap ada).
+      delete names[6]
+      
+      console.info(names)
+      console.table(names)
+
+      // Menambahkan Array ke dalam Array
+      names.push(['Arif','Arfi','Ramadhani'])
+      console.table(names)
+   </script>
+
+</body>
+</html>

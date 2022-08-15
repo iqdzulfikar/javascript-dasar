@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>In Operator</title>
+</head>
+<body>
+   
+   <script>
+      // In Operator: mengecek apakah sebuah `property` ada di dalam object atau tidak.
+      // In Operator juga dapat digunakan untuk mengecek index di dalam array.
+
+      // Contoh pada Object
+      const names = {
+         firstName: "Rifqi",
+         lastName: "Dzulfikar"
+      };
+
+      const ada = 'firstName' in names;
+      document.writeln(ada)
+
+      // Contoh pada Array
+      const arrayNames = ['Rifqi', 'Dzulfikar'];
+      const exist = 2 in arrayNames;
+
+      document.writeln(exist)
+      
+   </script>
+
+</body>
+</html>

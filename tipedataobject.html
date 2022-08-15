@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tipedata Object</title>
+</head>
+<body>
+   
+   <script>
+      /** Tipe Data Object (Assosiatif Array pd Php -- kita bisa menggunakan index dengan tipedata lain selain number. misal: string).
+       Di JavaScript tidak mendukung hal tersebut.
+       Namun jika kita ingin memaksakan hal tersebut, JS akan merubah tipe data Array menjadi tipedata Object, dan ini bisa berbahaya. Karena beberapa operasi di Array mungkin bisa berubah hasilnya (tidak dapat berjalan dengan semestinya). */
+
+       /** Tipedata Object: mirip dengan Array
+        * Bedanya, index pada tipedata Object bisa menggunakan string.
+        * Index di object biasanya disebut dengan attributes atau properties, bukan INDEX.
+        * Nama properties object dapat dipisah dengan spasi
+        * Selebihnya mirip dengan array.
+        * */
+       const objectKosong = {};
+
+       // Tipe data Array yg nantinya akan dianggap sebuah Object oleh si JS, karena indexnya berupa properties (bukan number)
+       const person = [];
+       person['name'] = 'Rifqi Dzulfikar'
+       person['dob'] = 'March, 11th 2000'
+       person['age'] = 22
+       console.table(person)
+       console.info(person['age'])
+       
+       // Menghapus object dengan delete nameOfObject[properties]
+       delete person['age']
+       console.table(person)
+
+       // Membuat Object dengan Properties
+       const student = {
+         name: 'Dzulfikar Rifqi',
+         'alamat domisili': 'Cipatik, Indonesia',
+         id: '9882405219111025'
+       }
+       console.table(student)
+
+       // Mengakses spesifik value pada object pd string template
+       // 1. ${nameOfObject.propertyName}
+       console.info(`Name\t: ${student.name}`)
+       
+       // 2. ${nameOfObject['propertyName']}
+       console.info(`Alamat\t ${student["alamat domisili"]}`)
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Object Method</title>
+	</head>
+	<body>
+		<script>
+			// Object Method: kita bisa menambahkan function ke dalam object sebagai propertynya (Object Method)
+			// Cara pembuatannya sama dengan function sebagai value
+
+			// Cara membuat object dengan method
+			// const person = {
+			//     name: 'Rifqi',
+			//     sayHello: function (name) {
+			//         alert(`Hello ${name}`);
+			//     }
+			// };
+
+			// person.sayHello('Dzulfikar');
+
+			const person = {
+                name: 'Rifqi'
+			};
+            
+            // Menambah method ke object
+            person.sayHello = function (name) {
+				alert(`Hello ${name}`);
+			}
+			person.sayHello('Rifqi');
+		</script>
+	</body>
+</html>

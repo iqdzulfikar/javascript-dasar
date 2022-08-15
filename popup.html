@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Popup</title>
+</head>
+<body>
+   <!-- Popup
+   1. Alert: memberi peringatan berupa popup
+   2. Prompt: meminta input string dari pengguna browser dalam bentuk popup input text
+   3. Confirm: meminta input boolean dari pengguna browser (pilihan)--> 
+   <script>
+      // Alert
+      // alert('Password salah!')
+
+      // Prompt
+      // const name = prompt('What is your name?')
+      // alert(`Hi ${name}`)
+
+      const login = confirm('Anda yakin ingin masuk?')
+      if (login) {
+         const name = prompt('What is your name?')
+         alert(`Hi ${name}`)
+      } else {
+         alert('Bye!')
+      }
+   </script>
+</body>
+</html>

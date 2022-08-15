@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Function | Return Value</title>
+</head>
+<body>
+   <script>
+   
+      // Function Return Value: Berbeda dengan Java, dimana pada JS function tidak perlu memasukkan `return type`. Kita cukup menambahkan keyword `return` diikuti value yg ingin kita kembalikan.
+      function sayHello(firstName, lastName) {
+         const fullName = `Hello ${firstName} ${lastName}`;
+         return fullName;
+      }
+
+      // Memanggil Function
+      const fullName = sayHello("Rifqi", "Dzulfikar");
+      document.writeln(fullName);
+
+      document.writeln('<br>');
+      
+      const numValue = sayHello(11, 1);
+      document.writeln(numValue);
+   
+   </script>
+</body>
+</html>

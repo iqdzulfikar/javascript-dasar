@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function sebagai Value</title>
+</head>
+<body>
+    
+    <script>
+        // Function sebagai Value
+        function sayHello(name) {
+            console.info(`Hello ${name}`);
+        }
+
+        function giveMeName(callback) {
+            callback('Zaky');
+        }
+        
+        // Function di JS bisa digunakan sebagai variable
+        let say = sayHello;
+
+        sayHello('Dzul');
+        say('Rifqi');
+
+        // Function di parameter
+        giveMeName(sayHello);
+        giveMeName(say);
+
+    </script>
+
+</body>
+</html>

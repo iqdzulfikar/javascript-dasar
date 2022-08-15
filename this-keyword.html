@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+    
+    <script>
+        // This keyword 
+        // Object Method, this adalah referensi ke object pemilik functionnya 
+        // Dalam global scope dan function, this adalah referensi ke global object (Window)
+
+        // Global scope
+        console.info(this); // Window
+
+        // Dalam function
+        function sample() {
+            console.info(this); // Window
+        }
+
+        // Dalam Object method
+        const person = {
+            name: 'Rifqi',
+            sayHello: function (name) {
+
+                // Hi ${name}, My name is Rifqi
+                console.info(`Hi ${name}, my Name is ${this.name}`);
+            }
+        }
+
+        sample();
+        person.sayHello('Dzulfikar');
+
+    </script>
+</body>
+</html>

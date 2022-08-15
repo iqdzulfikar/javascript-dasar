@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Optional dan Default Parameter</title>
+</head>
+<body>
+   
+   <script>
+      // Optional Parameter: secara default, parameter di function itu optional.
+      // Artinya kita tidak wajib mengisi valuenya, ketika memanggil function.
+
+      // Jika tidak ada value yg kita kirim ke parameter ketika memanggil function, maka secara otomatis parameter tersebut bernilai undefined.
+
+      // Optional Parameter
+      function sayHello(fName, mName, lName) {
+         console.log(fName);
+         console.log(mName);
+         console.log(lName);
+      }
+
+      // parameter mName dan lName akan bernilai `undefined`
+      sayHello('Rifqi');
+
+      // Default Parameter: parameter di dalam function bersifat optional. Tetapi, kita juga bisa memberi default value pada parameter.
+      // Artinya, jika kita tidak mengsisi argument pada functionnya ketika dipanggil. Secara otomatis parameternya akan diisi oleh default valuenya.
+      function register(name, gender = 'UNKNOWN') {
+         console.log(name);
+         console.log(gender);
+      }
+
+      register('Rifqi', 'Laki-laki');
+      register(11)
+      register();
+   </script>
+
+</body>
+</html>

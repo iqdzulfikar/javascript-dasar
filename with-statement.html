@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>With Statement</title>
+</head>
+<body>
+   
+   <script>
+      // With Statement: menurunkan sebuah scope data.
+      // Dengan with statement, kita bisa mengakses property dalam sebuah data tanpa harus menyebut data (variable) nya.
+      const person = {
+         firstName: "Rifqi",
+         lastName: "Dzulfikar"
+      };
+
+      // With statement tidak direkomendasikan, meskipun fitur ini sangat unik.
+      // Karena jika terdapat nama variable yg sama dengan nama property, hal ini akan terlihat ambigu (membingungkan).
+      with(person) {
+         console.info(`${firstName}`);
+         console.info(`${lastName}`);
+      }
+   </script>
+</body>
+</html>

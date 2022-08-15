@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Function Generator</title>
+	</head>
+	<body>
+		<script>
+			// Function Generator: digunakan utk membuat data generator
+			// Generator adalah data yang bisa diiterasi seperti array.
+			// Untuk membuat function generator, kita bisa menggunakan tanda `*` setelah kata function.
+			// Dan utk mengembalikan data di tiap iterasi, kita bisa gunakan kata kunci yield diikuti datanya.
+            // Function Generator bersifat lazy
+
+			// Function Generator Sederhana
+			function* createNames() {
+				yield 'Muhammad';
+				yield 'Rifqi';
+				yield 'Dzulfikar';
+			}
+
+			// Function Generator Kompleks: lazy
+			function* buatGanjil(value) {
+				for (let index = 1; index <= value; index++) {
+                    if(index % 2 === 1) {
+                        // console.info(`Yield ${index}`);
+                        yield index;
+                    }
+                }
+			}
+			// Function dengan Array: not-lazy (eager)
+			function* buatGanjilArray(value) {
+                const result = [];
+				for (let index = 1; index <= value; index++) {
+                    if(index % 2 === 1) {
+                        console.info(`Yield: ${index}`);
+                        result.push(index);
+                    }
+                }
+                return result;
+			}
+
+			const names = createNames();
+			for (const name of names) {
+				document.writeln(`<p>Hi ${name}</p>`);
+			}
+
+            const numbers = buatGanjil(20); // lazy
+            // const numbers = buatGanjilArray(20); // eager
+            for (const number of numbers) {
+                console.info(number);
+            }
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>String Template</title>
+</head>
+<body>
+   
+   <script>
+      // String Template: mensubtitusi (memasukkan/menggabungkan) data variable ke dalam string dan membuat string multiline (spt textblock pada java JDK 15). ex: mengambil value dari variable lain, bahkan melakukan operasi matematika.
+      // Caranya: menggunakan ` (backtick) --bukan single ataupun double quotes.
+      // const template = `Name: ${name}`;
+
+      const lastName = 'Dzulfikar'
+      const value = 80
+
+      const template = `Name: Rifqi ${lastName}
+Lulus: ${value > 80}`
+
+      console.info(template)
+   </script>
+
+</body>
+</html>

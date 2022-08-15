@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Undefined</title>
+</head>
+<body>
+   
+   <script>
+      // Undefined: tipedata (variable yg belum ditambahkan nilai, artinya tipe datanya undefined)
+      // Undefined berbeda dengan null di bahasa lain
+      // Variable yg belum diinisialisasi valuenya, maka nilai nya `undefined`
+      let name;
+      if (name == undefined) {
+         alert('Undefined')
+      } else {
+         alert('Defined')
+      }
+
+      // Undefined Array Value
+      const names = ['Rifqi', 'Dzulfikar']
+
+      // names[2] belum diinisialisasi
+      if(names[2] == undefined) {
+         // alert('Undefined Value')
+         alert(`Hi ${names[2]}`)
+      } else {
+         alert(`Hi, ${names[2]}`)
+      }
+   </script>
+
+</body>
+</html>

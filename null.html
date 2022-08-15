@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Null</title>
+</head>
+<body>
+   <script>
+
+      // Null: representasi data yg kosong
+      // Null berbeda dengan undefined, null berarti variable `sudah ditambahkan valuenya`. Namun valuenya bernilai `null`
+      // Sedangkan undefined adalah sebuah variable yg valuenya `belum ditambahkan`
+      let firstName;
+      let middleName = null;
+
+      // undefined
+      document.writeln(`FirstName: ${firstName}`)
+      document.writeln('<br>')
+
+      if(middleName === undefined) {
+         document.writeln(`middleName: ${middleName}`)
+         document.writeln('<br>')
+      } else if(middleName === null) {
+         document.writeln(`middleName: ${middleName}`)
+         document.writeln('<br>')
+      }
+      
+   </script>
+</body>
+</html>

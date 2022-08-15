@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Optional Chaining</title>
+</head>
+<body>
+   
+   <script>
+      // Optional Chaining operator (?) adalah operator yg digunakan utk mengamankan ketika kita ingin mengakses property sebuah object dari data `nullish`
+      // Jika kita mencoba mengakses property dari sebuah object dari data nullish tanpa menggunakan optional chaining opeerator, maka akan terjadi `error`.
+      
+      // tidak nullish
+      let person = {
+         address: {
+            country: 'Indonesia'
+         }
+      };
+
+      // nullish
+      // let person = {};
+
+      // Jika person tidak nullish, cek property address, kemudian jika address tidak nullish, akses property country
+      alert(person?.address?.country);
+   </script>
+
+</body>
+</html>

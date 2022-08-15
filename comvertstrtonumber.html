@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>String to Number</title>
+</head>
+<body>
+   <script>
+      /** Konversi String ke Number
+       * 1. parseInt(string) -> string ke number (bil. bulat)
+       * 2. parseFloat(string) -> string ke number (bil. pecahan)
+       * 3. Number(string) -> string ke number (bil bulat atau pecahan)
+       * 4. number.toString() -> number ke string */
+      let val1 = "1.63"
+      let val2 = 2
+
+      let sum = val1 + val2
+      console.info(sum) // 1.632 -> string
+
+      sum = parseInt(val1) + val2
+      console.info(sum) // int -> dibulatkan ke bawah
+      
+      sum = parseFloat(val1) + val2
+      console.info(sum) // float -> 3.63
+
+      sum = Number(val1) + val2
+      console.info(sum) // generate tipe yg sesuai dengan valuenya
+      
+      // Jika nilai string yg dikonversi bukan berupa number, maka JavaScript akan menampilkan 'NaN' -- Not a Number
+      // Kita bisa cek sebuah variable bernilai Nan atau bukan dengan method isNan(number) yg mana hasilnya berupa boolean value
+      console.info('Contoh \'NaN\'')
+      val1 = 'salah'
+      if (!isNaN(val1)) {
+         sum = parseInt(val1) + val2
+         console.info(sum)
+      } else {
+         console.error("\'val1\' bernilai NaN")
+      }
+
+   </script>
+</body>
+</html>

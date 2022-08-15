@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    
+    <script>
+        // Arrow Function: alternatif pembuatan function yg lebih sederhana
+        // Membuat Arrow Function kita dapat menggunakan tanda => 
+        // Beberapa kekurangan arrow function:
+        // 1. tidak memiliki fitur `arguments object`
+        // 2. tidak bisa menggunakan `function generator`
+        // 3. tidak bisa mengakses `this`
+        // 4. tidak bisa mengakses `super`
+
+        // Arrow Function tanpa return value
+        const sayHi = (name) => {
+            const say = `Hello ${name}`;
+            document.writeln(`<p>${say}</p>`);
+        }
+
+        // Arrow Function return value (bisa juga tanpa keyword `return`)
+        const sum = (fValue, sValue) => fValue + sValue;
+
+        sayHi('Dzulfikar');
+        document.writeln(`<p>${sum(2, 4)}</p>`);
+    </script>
+
+</body>
+</html>

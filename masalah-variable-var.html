@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Variable Var</title>
+</head>
+<body>
+    
+    <script>
+        // Var tidak direkomendasikan lagi, karena tidak memiliki `block scope`. Artinya dia tidak mengikat ke local scope.
+        // Karena hal tersebut, var tidak bisa diprediksi.
+
+        // Contoh menggunakan let keyword: lebih mudah untuk di prediksi
+        // Global scope
+        // let i = 20;
+
+        // Local scope
+        // for (let i = 0; i < 10; i++) { // variable i di dalam for akan dianggap dua buah variable yg berbeda dgn global scopenya
+        //     console.log(`Local: ${i}`);
+        // }
+
+        // console.info(`Global: ${i}`);
+
+        // Contoh menggunakan var keyword
+        // Global scope
+        var i = 20;
+
+        // Local scope
+        for (var i = 0; i < 10; i++) { // variable i di dalam for akan dianggap sama (i di for ia, dianggap meng-override value variable i yg global scope)
+            console.log(`Local: ${i}`);
+        }
+
+        console.info(`Global: ${i}`);
+    </script>
+
+</body>
+</html>

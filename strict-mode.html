@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode</title>
+</head>
+<body>
+    
+    <script>
+        // Strict Mode
+        function useStrictMode() {
+            // 'use strict';
+            const person = {
+                fName: 'Rifqi'
+            };
+            with (person) { // ERROR: ketika kita menjalankan strict mode
+                console.info(fName);
+            }
+        }
+        useStrictMode();
+    </script>
+
+</body>
+</html>

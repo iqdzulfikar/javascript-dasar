@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>For Of</title>
+</head>
+<body>
+   
+   <script>
+      // For Of: digunakan utk melakukan iterasi terhadap isi value dari iterable object, seperti: Array, String, dll.
+      // For of tidak bisa digunakan untuk melakukan iterasi data di dalam object, karena `object bukanlah iterable`.
+
+      const names = ['Rifqi', 'Dzulfikar'];
+      const unibi = "UNIVERSITAS INFORMATIKA DAN BISNIS INDONESIA";
+
+      // For of di Array
+      for(const name of names) {
+         document.writeln(`<p>${name}</p>`);
+      }
+      
+      // For of di String
+      for (const u of unibi) {
+         document.writeln(`<p>${u}</p>`);
+      }
+   </script>
+
+</body>
+</html>

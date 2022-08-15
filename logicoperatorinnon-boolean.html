@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Operator Logika di Non-Boolean</title>
+</head>
+<body>
+   
+   <script>
+      // OR (||) operator membaca dari kiri ke kanan.
+      // Operator ini akan mengambil nilai pertama yg truthy. Tetapi, jika `tidak ada satupun yg bernilai truthy`. Maka dia akan mengambil nilai yg terakhir.
+      console.info("Hello" || ''); // Hello
+      console.info("" || []); // []
+      console.info("0" || 0); // '0'
+      console.info(null || 'NULL'); // NULL
+      console.info(undefined || 'UNDEFINED'); // UNDEFINED
+
+
+      // AND (&&) operator membaca dari kiri ke kanan.
+      // Operator ini akan mengambil nilai pertama yg falsy.
+      // Jika tidak ada satupun yg falsy, maka nilai terakhir yg akan diambil.
+
+      console.info('\n');
+      console.info('Hello' && ''); // ''
+      console.info("" && []) // ""
+      console.info("0" && "NOL"); // NOL
+      console.info(0 && "NOL"); // 0
+      console.info(null && "NULL"); // null
+      console.info("UNDEFINED" && undefined); // undefined
+      console.info("undefined" && "null"); // null
+   </script>
+
+</body>
+</html>
